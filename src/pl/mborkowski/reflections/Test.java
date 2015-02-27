@@ -11,20 +11,23 @@ public class Test {
 	public static void main(String[] args) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
 		Vehicle v = new Vehicle("Daewoo", "Nubira", 2000);
 		Test t = new Test();
-		long readTime = t.readValue(t,v);
-		long writeTime = t.writeValue(t,v);
-		long invokeMethod = t.invokeMethod(t, v);
-		t.processTime(readTime, "odczyt zmiennej");
-		t.processTime(writeTime, "zapis zmiennej");
-		t.processTime(invokeMethod, "wywołanie metody");
-		
-		long readTimeByReflection = t.readValueByReflection(t, v);
-		long writeTimeByReflection = t.writeValueByReflection(t, v);
-		long invokeMethodByReflection = t.invokeMethodByReflection(t, v);
-		t.processTime(readTimeByReflection, "odczyt zmiennej przez refleksje");
-		t.processTime(writeTimeByReflection, "zapis zmiennej przez refleksje");
-		t.processTime(invokeMethodByReflection, "wywołanie metody przez reflekcje");
-		
+		for (int i = 1; i <= 10; i++) {
+			System.out.println("uruchomienie nr " + i);
+			long readTime = t.readValue(t,v);
+			long writeTime = t.writeValue(t,v);
+			long invokeMethod = t.invokeMethod(t, v);
+			t.processTime(readTime, "odczyt zmiennej");
+			t.processTime(writeTime, "zapis zmiennej");
+			t.processTime(invokeMethod, "wywołanie metody");
+			
+			long readTimeByReflection = t.readValueByReflection(t, v);
+			long writeTimeByReflection = t.writeValueByReflection(t, v);
+			long invokeMethodByReflection = t.invokeMethodByReflection(t, v);
+			t.processTime(readTimeByReflection, "odczyt zmiennej przez refleksje");
+			t.processTime(writeTimeByReflection, "zapis zmiennej przez refleksje");
+			t.processTime(invokeMethodByReflection, "wywołanie metody przez reflekcje");
+		}
+		System.out.println("\n");
 	}
 	
 	public long readValue(Test t, Vehicle v) {

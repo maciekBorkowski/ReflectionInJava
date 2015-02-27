@@ -16,7 +16,7 @@ public class Test {
 		long invokeMethod = t.invokeMethod(t, v);
 		t.processTime(readTime, "odczyt zmiennej");
 		t.processTime(writeTime, "zapis zmiennej");
-		t.processTime(writeTime, "wywołanie metody");
+		t.processTime(invokeMethod, "wywołanie metody");
 		
 		long readTimeByReflection = t.readValueByReflection(t, v);
 		long writeTimeByReflection = t.writeValueByReflection(t, v);

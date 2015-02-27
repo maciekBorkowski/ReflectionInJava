@@ -28,21 +28,21 @@ public class Test {
 	}
 	
 	public long readValue(Test t, Vehicle v) {
-	   t.readValueManyTimes(v);	   
-	   long startTime = System.nanoTime();
-	   t.readValueManyTimes(v);	
-	   long estimatedTime = System.nanoTime() - startTime;
+		t.readValueManyTimes(v);	   
+	   	long startTime = System.nanoTime();
+	   	t.readValueManyTimes(v);	
+	   	long estimatedTime = System.nanoTime() - startTime;
 	   
-	   return estimatedTime;
+	   	return estimatedTime;
 	}
 		
 	public long writeValue(Test t, Vehicle v) {
-	   t.writeValueManyTimes(v);   
-	   long startTime = System.nanoTime();
-	   t.writeValueManyTimes(v);   
-	   long estimatedTime = System.nanoTime() - startTime;
+		t.writeValueManyTimes(v);   
+		long startTime = System.nanoTime();
+		t.writeValueManyTimes(v);   
+		long estimatedTime = System.nanoTime() - startTime;
 	   
-	   return estimatedTime;
+		return estimatedTime;
 	}
 	
 	public long invokeMethod(Test t, Vehicle v) {
@@ -55,30 +55,30 @@ public class Test {
 	}
 	
 	public long readValueByReflection(Test t, Vehicle v) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-	   t.readValueManyTimesByReflection(v);	   
-	   long startTime = System.nanoTime();
-	   t.readValueManyTimesByReflection(v);	
-	   long estimatedTime = System.nanoTime() - startTime;
-	   
-	   return estimatedTime;
+		t.readValueManyTimesByReflection(v);	   
+		long startTime = System.nanoTime();
+		t.readValueManyTimesByReflection(v);	
+		long estimatedTime = System.nanoTime() - startTime;
+		
+		return estimatedTime;
 	}
 			
 	public long writeValueByReflection(Test t, Vehicle v) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-	   t.writeValueManyTimesByReflection(v);   
-	   long startTime = System.nanoTime();
-	   t.writeValueManyTimesByReflection(v);   
-	   long estimatedTime = System.nanoTime() - startTime;
+		t.writeValueManyTimesByReflection(v);   
+		long startTime = System.nanoTime();
+		t.writeValueManyTimesByReflection(v);   
+		long estimatedTime = System.nanoTime() - startTime;
 	   
-	   return estimatedTime;
+		return estimatedTime;
 	}
 	
 	public long invokeMethodByReflection(Test t, Vehicle v) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-	   t.invokeMethodManyTimesByReflection(v); 
-	   long startTime = System.nanoTime();
-	   t.invokeMethodManyTimesByReflection(v);   
-	   long estimatedTime = System.nanoTime() - startTime;
+		t.invokeMethodManyTimesByReflection(v); 
+		long startTime = System.nanoTime();
+		t.invokeMethodManyTimesByReflection(v);   
+		long estimatedTime = System.nanoTime() - startTime;
 	   
-	   return estimatedTime;
+		return estimatedTime;
 	}
 	
 	public void readValueManyTimes(Vehicle v) {
